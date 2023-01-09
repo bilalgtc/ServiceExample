@@ -12,11 +12,12 @@ import android.widget.ImageView;
 
 import com.example.service_example.Adapters.Recycler_Adapter;
 import com.example.service_example.Helper.DatabaseHelper;
+import com.example.service_example.Interfaces.AddData;
 import com.example.service_example.Model.Recycle_model;
 
 import java.util.ArrayList;
 
-public class DashBoard extends AppCompatActivity implements AddData  {
+public class DashBoard extends AppCompatActivity implements AddData {
 
     RecyclerView recyclerView;
     ArrayList<Recycle_model> details = new ArrayList<>();
@@ -35,6 +36,7 @@ public class DashBoard extends AppCompatActivity implements AddData  {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                finish();
             }
         });
 

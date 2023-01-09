@@ -1,4 +1,4 @@
-package com.example.service_example;
+package com.example.service_example.Services;
 
 import android.app.Service;
 import android.content.Context;
@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 
 import com.example.service_example.Adapters.Recycler_Adapter;
 import com.example.service_example.Helper.DatabaseHelper;
+import com.example.service_example.Interfaces.AddData;
 
 public class AddService extends Service implements AddData {
 

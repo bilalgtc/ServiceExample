@@ -9,8 +9,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.service_example.Helper.DatabaseHelper;
+import com.example.service_example.Services.AddService;
 
-public class MainActivity extends AppCompatActivity implements AddData {
+public class MainActivity extends AppCompatActivity {
 
     EditText name_ed,email_ed,password_ed,phone_ed;
     Button btn_submit;
@@ -47,13 +48,14 @@ public class MainActivity extends AppCompatActivity implements AddData {
                 intent.putExtra("email",email);
                 intent.putExtra("mobile",mobile);
                 intent.putExtra("password",password);
-                onUpdateStatus();
 
                 startService(intent);
 
-
-                startActivity(new Intent(getApplicationContext(),DashBoard.class));
+                intent = new Intent(getApplicationContext(),DashBoard.class);
+                startActivity(intent);
                 finish();
+//                startActivity(new Intent(getApplicationContext(),DashBoard.class));
+//                finish();
 
 //                boolean i=helper.addRecord(name, email, mobile, password);
 //                if (i){
@@ -81,8 +83,5 @@ public class MainActivity extends AppCompatActivity implements AddData {
     }
 
 
-    @Override
-    public void onUpdateStatus() {
 
-    }
 }
