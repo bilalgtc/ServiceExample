@@ -13,9 +13,6 @@ import com.example.service_example.Interfaces.AddData;
 
 public class AddService extends Service implements AddData {
 
-    String name, email, mobile, password;
-    Recycler_Adapter adapter;
-    Context context;
 
     @Nullable
     @Override
@@ -26,7 +23,6 @@ public class AddService extends Service implements AddData {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
-//        ((AddService) context).onUpdateStatus();
 
         final String name= intent.getStringExtra("name");
         final String email= intent.getStringExtra("email");
