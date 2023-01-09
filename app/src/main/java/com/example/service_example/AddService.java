@@ -1,20 +1,14 @@
-package com.example.service_example.Services;
-
-import static android.provider.Telephony.Mms.Part.NAME;
+package com.example.service_example;
 
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
-import android.util.Log;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
 import com.example.service_example.Adapters.Recycler_Adapter;
 import com.example.service_example.Helper.DatabaseHelper;
-import com.example.service_example.Interfaces.AddData;
-import com.example.service_example.MainActivity;
 
 public class AddService extends Service implements AddData {
 
@@ -43,15 +37,13 @@ public class AddService extends Service implements AddData {
 
         DatabaseHelper helper = new DatabaseHelper(this);
         helper.addRecord(name, email, mobile, password);
-
+        onUpdateStatus();
         return START_STICKY;
     }
 
 
-
     @Override
     public void onUpdateStatus() {
-
 
     }
 }

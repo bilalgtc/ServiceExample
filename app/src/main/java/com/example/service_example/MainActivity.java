@@ -4,14 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.service_example.Helper.DatabaseHelper;
-import com.example.service_example.Interfaces.AddData;
-import com.example.service_example.Services.AddService;
 
 public class MainActivity extends AppCompatActivity implements AddData {
 
@@ -56,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements AddData {
 
 
                 startActivity(new Intent(getApplicationContext(),DashBoard.class));
+                finish();
 
 //                boolean i=helper.addRecord(name, email, mobile, password);
 //                if (i){

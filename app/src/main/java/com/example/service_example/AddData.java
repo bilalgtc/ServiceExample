@@ -1,4 +1,4 @@
-package com.example.service_example.Interfaces;
+package com.example.service_example;
 
 public interface AddData {
 
